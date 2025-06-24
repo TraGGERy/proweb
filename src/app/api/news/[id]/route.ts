@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 
 // GET handler to fetch a specific news article by ID
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(request: Request, context: { params: { id: string } }) {
+  const { params } = context;
   try {
     const id = params.id;
     
@@ -35,7 +36,8 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 // PUT handler to update a specific news article
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+export async function PUT(request: Request, context: { params: { id: string } }) {
+  const { params } = context;
   try {
     const id = params.id;
     const body = await request.json();
@@ -104,7 +106,8 @@ export async function PUT(request: Request, { params }: { params: { id: string }
 }
 
 // DELETE handler to remove a specific news article
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: Request, context: { params: { id: string } }) {
+  const { params } = context;
   try {
     const id = params.id;
     
