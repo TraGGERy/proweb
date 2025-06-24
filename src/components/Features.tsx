@@ -52,7 +52,6 @@ export default function Features() {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
         stiffness: 100,
         damping: 15,
       },
@@ -99,7 +98,7 @@ export default function Features() {
                 <motion.div 
                   className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 text-red-700 border border-red-200"
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  transition={{ stiffness: 400, damping: 10 }}
                 >
                   {feature.icon}
                 </motion.div>

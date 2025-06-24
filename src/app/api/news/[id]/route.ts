@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 
 // GET handler to fetch a specific news article by ID
-export async function GET(request: Request, context: { params: { id: string } }) {
-  const { params } = context;
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   try {
-    const id = params.id;
+    const id = resolvedParams.id;
     
     // Validate ID
     if (!id || isNaN(Number(id))) {
@@ -36,10 +36,10 @@ export async function GET(request: Request, context: { params: { id: string } })
 }
 
 // PUT handler to update a specific news article
-export async function PUT(request: Request, context: { params: { id: string } }) {
-  const { params } = context;
+export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   try {
-    const id = params.id;
+    const id = resolvedParams.id;
     const body = await request.json();
     
     // Validate ID
@@ -106,10 +106,10 @@ export async function PUT(request: Request, context: { params: { id: string } })
 }
 
 // DELETE handler to remove a specific news article
-export async function DELETE(request: Request, context: { params: { id: string } }) {
-  const { params } = context;
+export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   try {
-    const id = params.id;
+    const id = resolvedParams.id;
     
     // Validate ID
     if (!id || isNaN(Number(id))) {
