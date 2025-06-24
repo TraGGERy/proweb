@@ -15,7 +15,7 @@ const galleryImages = [
     description: "Highlights from our flagship event featuring industry leaders and professionals from across Zimbabwe.",
     date: "November 2023",
     category: "Events",
-    image: "/gallery/conference-1.jpg",
+    image: "/IMG_7448.jpg",
     featured: true
   },
   {
@@ -24,7 +24,7 @@ const galleryImages = [
     description: "Celebrating and empowering women professionals in various leadership roles.",
     date: "October 2023",
     category: "Events",
-    image: "/gallery/women-leadership.jpg",
+    image: "/IMG_7463.jpg",
     featured: true
   },
   {
@@ -33,7 +33,7 @@ const galleryImages = [
     description: "The official launch of our structured mentorship program connecting experienced professionals with emerging talent.",
     date: "October 2023",
     category: "Programs",
-    image: "/gallery/mentorship.jpg",
+    image: "/IMG_7538.jpg",
     featured: false
   },
   {
@@ -42,7 +42,7 @@ const galleryImages = [
     description: "Partnership signing with the Ministry of Industry for our SME Support Initiative.",
     date: "October 2023",
     category: "Partnerships",
-    image: "/gallery/partnership.jpg",
+    image: "/IMG_7543.jpg",
     featured: false
   },
   {

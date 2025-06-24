@@ -33,7 +33,7 @@ export default function About() {
             whileHover={{ scale: 1.02 }}
           >
             <Image 
-              src="/mission-image.jpg" 
+              src="/IMG_7448.jpg" 
               alt="PROWEB mission in action" 
               fill 
               style={{objectFit: "cover"}}

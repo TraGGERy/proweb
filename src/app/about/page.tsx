@@ -10,9 +10,9 @@ import { useState, useEffect } from "react";
 export default function AboutPage() {
   const [currentImage, setCurrentImage] = useState(0);
   const heroImages = [
-    "/about-hero-1.jpg",
-    "/about-hero-2.jpg",
-    "/about-hero-3.jpg"
+    "/IMG_7202.jpg",
+    "/IMG_7203.jpg",
+    "/IMG_7204.jpg"
   ];
 
   // Auto-rotate images

@@ -20,7 +20,7 @@ const projectsData = [
     status: "Active",
     startDate: "January 2023",
     endDate: "December 2023",
-    image: "/projects/women-tech.jpg",
+    image: "/IMG_7203.jpg",
     featured: true
   },
   {
@@ -34,7 +34,7 @@ const projectsData = [
     status: "Active",
     startDate: "March 2023",
     endDate: "March 2025",
-    image: "/projects/rural-sme.jpg",
+    image: "/IMG_7204.jpg",
     featured: true
   },
   {
@@ -48,7 +48,7 @@ const projectsData = [
     status: "Active",
     startDate: "June 2023",
     endDate: "May 2024",
-    image: "/projects/youth-skills.jpg",
+    image: "/IMG_7448.jpg",
     featured: false
   },
   {
@@ -62,7 +62,7 @@ const projectsData = [
     status: "Active",
     startDate: "April 2023",
     endDate: "March 2024",
-    image: "/projects/policy-advocacy.jpg",
+    image: "/IMG_7538.jpg",
     featured: false
   },
   {
@@ -76,7 +76,7 @@ const projectsData = [
     status: "Active",
     startDate: "February 2023",
     endDate: "January 2026",
-    image: "/projects/business-incubator.jpg",
+    image: "/IMG_7543.jpg",
     featured: true
   },
   {
@@ -90,7 +90,7 @@ const projectsData = [
     status: "Active",
     startDate: "January 2023",
     endDate: "December 2023",
-    image: "/projects/leadership-conference.jpg",
+    image: "/IMG_7546.jpg",
     featured: false
   },
   {
@@ -104,7 +104,7 @@ const projectsData = [
     status: "Active",
     startDate: "May 2023",
     endDate: "April 2024",
-    image: "/projects/teacher-digital.jpg",
+    image: "/IMG_7202.jpg",
     featured: false
   },
   {
@@ -118,7 +118,7 @@ const projectsData = [
     status: "Active",
     startDate: "July 2023",
     endDate: "June 2024",
-    image: "/projects/womens-health.jpg",
+    image: "/IMG_7463.jpg",
     featured: false
   }
 ];

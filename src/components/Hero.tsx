@@ -6,21 +6,22 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-red-900 to-red-800 text-white py-24 md:py-32 overflow-hidden border-b-4 border-yellow-500">
-      <div className="absolute inset-0 opacity-20">
+    <section className="relative bg-gray-900 text-white py-24 md:py-32 overflow-hidden border-b-4 border-yellow-500">
+      <div className="absolute inset-0">
         <Image 
-          src="/hero-background.jpg" 
+          src="/bachground-1.png" 
           alt="Professional networking" 
           fill 
           style={{objectFit: "cover"}}
           priority
         />
       </div>
+
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl">
           <motion.h1 
-            className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-shadow"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg shadow-black"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -29,7 +30,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.p 
-            className="text-xl mb-10 text-red-50"
+            className="text-xl mb-10 text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

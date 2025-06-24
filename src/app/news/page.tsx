@@ -16,7 +16,7 @@ const newsArticles = [
     date: "November 15, 2023",
     author: "PROWEB Communications Team",
     category: "Events",
-    image: "/news-conference.jpg",
+    image: "/IMG_7546.jpg",
     featured: true
   },
   {
@@ -27,7 +27,7 @@ const newsArticles = [
     date: "October 28, 2023",
     author: "Professional Development Committee",
     category: "Programs",
-    image: "/news-mentorship.jpg",
+    image: "/IMG_7546 (1).jpg",
     featured: true
   },
   {
@@ -38,7 +38,7 @@ const newsArticles = [
     date: "October 15, 2023",
     author: "Partnerships Committee",
     category: "Partnerships",
-    image: "/news-partnership.jpg",
+    image: "/IMG_7202.jpg",
     featured: false
   },
   {
@@ -49,7 +49,7 @@ const newsArticles = [
     date: "October 5, 2023",
     author: "Gender Committee",
     category: "Events",
-    image: "/news-women-leadership.jpg",
+    image: "/IMG_7204.jpg",
     featured: false
   },
   {
@@ -60,7 +60,7 @@ const newsArticles = [
     date: "September 20, 2023",
     author: "Professional Development Committee",
     category: "Programs",
-    image: "/news-digital-skills.jpg",
+    image: "/IMG_7448.jpg",
     featured: false
   },
   {
@@ -71,7 +71,7 @@ const newsArticles = [
     date: "September 12, 2023",
     author: "PROWEB Communications Team",
     category: "Organization",
-    image: "/news-anniversary.jpg",
+    image: "/IMG_7543.jpg",
     featured: false
   }
 ];

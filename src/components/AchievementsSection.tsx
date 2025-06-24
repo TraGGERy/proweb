@@ -13,7 +13,7 @@ export default function AchievementsSection() {
         <div className="bg-red-800 text-white rounded-lg p-8 md:p-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image 
-              src="/awards-background.jpg" 
+              src="/IMG_7543.jpg" 
               alt="Awards ceremony" 
               fill 
               style={{objectFit: "cover"}}

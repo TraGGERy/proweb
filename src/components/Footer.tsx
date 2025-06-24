@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 border-b border-red-700 pb-2">PROWEB Zimbabwe</h3>
+            <div className="flex items-center mb-4">
+              <Image 
+                src="/logo.png" 
+                alt="PROWEB Logo" 
+                width={40} 
+                height={40} 
+                className="mr-2"
+              />
+              <h3 className="text-xl font-bold border-b border-red-700 pb-2">PROWEB Zimbabwe</h3>
+            </div>
             <p className="text-red-200 mb-4">
               Professional Women, Women Executives and Business Women&apos;s Forum
             </p>
