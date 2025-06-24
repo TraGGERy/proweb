@@ -6,6 +6,10 @@ import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbData } from "@/lib/structuredData";
+
+// Metadata is moved to a separate file (metadata.ts) since this is a client component
 
 // Sample gallery data - in a real application, this would come from an API or CMS
 const galleryImages = [
@@ -151,6 +155,27 @@ export default function GalleryPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeImage, setActiveImage] = useState<number | null>(null);
   
+  // Structured data for the gallery page
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Home', url: 'https://prowebzimbabwe.org/' },
+    { name: 'Gallery', url: 'https://prowebzimbabwe.org/gallery' }
+  ]);
+  
+  // Create structured data for image gallery
+  const galleryStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: 'PROWEB Zimbabwe Photo Gallery',
+    description: 'A collection of photos from PROWEB Zimbabwe events, workshops, and activities.',
+    image: galleryImages.map(img => ({
+      '@type': 'ImageObject',
+      contentUrl: `https://prowebzimbabwe.org${img.image}`,
+      name: img.title,
+      description: img.description,
+      datePublished: img.date
+    }))
+  };
+  
   // Get unique categories
   const categories = ["All", ...Array.from(new Set(galleryImages.map(image => image.category)))];
   
@@ -167,6 +192,10 @@ export default function GalleryPage() {
   
   return (
     <>
+      {/* JSON-LD structured data */}
+      <JsonLd data={breadcrumbData} />
+      <JsonLd data={galleryStructuredData} />
+      
       <Header />
       
       <main className="pt-24 pb-20">

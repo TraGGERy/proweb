@@ -6,12 +6,42 @@ import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbData } from "@/lib/structuredData";
+
+// Metadata is moved to a separate file (metadata.ts) since this is a client component
 
 export default function MembershipPage() {
   const [activeTab, setActiveTab] = useState("benefits");
   
+  // Structured data for the membership page
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Home', url: 'https://prowebzimbabwe.org/' },
+    { name: 'Membership', url: 'https://prowebzimbabwe.org/membership' }
+  ]);
+  
+  // Create structured data for membership
+  const membershipStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'PROWEB Zimbabwe Membership',
+    description: 'Join our community of professionals and unlock a world of opportunities including networking, mentorship, training, and advocacy.',
+    image: 'https://prowebzimbabwe.org/IMG_7463.jpg',
+    offers: {
+      '@type': 'Offer',
+      url: 'https://prowebzimbabwe.org/membership',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock'
+    },
+    category: 'Professional Membership'
+  };
+  
   return (
     <>
+      {/* JSON-LD structured data */}
+      <JsonLd data={breadcrumbData} />
+      <JsonLd data={membershipStructuredData} />
+      
       <Header />
       
       <main className="pt-24 pb-20">

@@ -5,6 +5,10 @@ import Image from "next/image";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbData, getArticleData } from "@/lib/structuredData";
+
+// Metadata is moved to a separate file (metadata.ts) since this is a client component
 
 // Sample news data - in a real application, this would come from an API or CMS
 const newsArticles = [
@@ -81,6 +85,24 @@ export default function NewsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeArticle, setActiveArticle] = useState<number | null>(null);
   
+  // Structured data for the news page
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Home', url: 'https://prowebzimbabwe.org/' },
+    { name: 'News', url: 'https://prowebzimbabwe.org/news' }
+  ]);
+  
+  // Generate article structured data for featured articles
+  const featuredArticlesData = newsArticles
+    .filter(article => article.featured)
+    .map(article => getArticleData({
+      headline: article.title,
+      description: article.excerpt,
+      image: `https://prowebzimbabwe.org${article.image}`,
+      datePublished: new Date(article.date).toISOString(),
+      dateModified: new Date(article.date).toISOString(),
+      author: article.author
+    }));
+  
   // Get unique categories
   const categories = ["All", ...Array.from(new Set(newsArticles.map(article => article.category)))];
   
@@ -97,6 +119,12 @@ export default function NewsPage() {
   
   return (
     <>
+      {/* JSON-LD structured data */}
+      <JsonLd data={breadcrumbData} />
+      {featuredArticlesData.map((articleData, index) => (
+        <JsonLd key={`article-${index}`} data={articleData} />
+      ))}
+      
       <Header />
       
       <main className="pt-24 pb-20">

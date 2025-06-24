@@ -6,6 +6,10 @@ import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbData } from "@/lib/structuredData";
+
+// Metadata is moved to a separate file (metadata.ts) since this is a client component
 
 // Sample projects data - in a real application, this would come from an API or CMS
 const projectsData = [
@@ -127,6 +131,32 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  
+  // Structured data for the projects page
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Home', url: 'https://prowebzimbabwe.org/' },
+    { name: 'Projects', url: 'https://prowebzimbabwe.org/projects' }
+  ]);
+  
+  // Create structured data for projects
+  const projectsStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: projectsData.map((project, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Project',
+        name: project.title,
+        description: project.description,
+        image: `https://prowebzimbabwe.org${project.image}`,
+        url: `https://prowebzimbabwe.org/projects#${project.id}`,
+        startDate: project.startDate,
+        endDate: project.endDate,
+        category: project.category
+      }
+    }))
+  };
   const [showFundingModal, setShowFundingModal] = useState(false);
   const [fundingAmount, setFundingAmount] = useState("");
   
@@ -155,6 +185,10 @@ export default function ProjectsPage() {
   
   return (
     <>
+      {/* JSON-LD structured data */}
+      <JsonLd data={breadcrumbData} />
+      <JsonLd data={projectsStructuredData} />
+      
       <Header />
       
       <main className="pt-24 pb-20">

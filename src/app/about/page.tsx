@@ -6,6 +6,10 @@ import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
+import JsonLd from "@/components/JsonLd";
+import { getOrganizationData, getBreadcrumbData } from "@/lib/structuredData";
+
+// Metadata is moved to a separate file (metadata.ts) since this is a client component
 
 export default function AboutPage() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,8 +28,19 @@ export default function AboutPage() {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
+  // Structured data for the about page
+  const organizationData = getOrganizationData();
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Home', url: 'https://prowebzimbabwe.org/' },
+    { name: 'About', url: 'https://prowebzimbabwe.org/about' }
+  ]);
+
   return (
     <>
+      {/* JSON-LD structured data */}
+      <JsonLd data={organizationData} />
+      <JsonLd data={breadcrumbData} />
+      
       <Header />
       
       <main>
