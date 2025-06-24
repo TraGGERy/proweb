@@ -1,4 +1,4 @@
-import { sql, query } from './db';
+import { query } from './db';
 import dotenv from 'dotenv';
 
 // Load environment variables

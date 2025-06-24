@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 // Import schema types as needed
-import { NewsArticle } from '@/lib/models/schema';
 
 // GET handler to fetch all news articles
 export async function GET(request: Request) {

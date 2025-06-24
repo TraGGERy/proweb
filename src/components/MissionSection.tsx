@@ -11,7 +11,7 @@ export default function MissionSection() {
               PROWEB Zimbabwe is a non-partisan civil forum established in 2005 to promote the economic empowerment of Zimbabwean women by providing a platform for networking, capacity building, policy advocacy, and personal as well as professional development.
             </p>
             <p className="text-gray-700">
-              We champion the belief that women, as vital contributors to society, should be at the forefront of national development and eventually control a significant portion of the country's wealth—envisioning a future where empowered women shape Zimbabwe's economic and social agenda.
+              We champion the belief that women, as vital contributors to society, should be at the forefront of national development and eventually control a significant portion of the country&apos;s wealth—envisioning a future where empowered women shape Zimbabwe&apos;s economic and social agenda.
             </p>
           </div>
           <div className="md:w-1/2 relative h-80 rounded-lg overflow-hidden shadow-xl">

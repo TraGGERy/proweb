@@ -33,7 +33,7 @@ export const getPool = () => {
 };
 
 // Helper function to execute queries with the pool
-export async function query(text: string, params?: any[]) {
+export async function query(text: string, params?: (string | number | boolean)[]) {
   const pool = getPool();
   try {
     const result = await pool.query(text, params);
