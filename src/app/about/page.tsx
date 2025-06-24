@@ -22,7 +22,7 @@ export default function AboutPage() {
     }, 5000); // Change image every 5 seconds
     
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   return (
     <>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   PROWEB Zimbabwe is a non-partisan civil forum established in 2005 to promote the economic empowerment of Zimbabwean professionals by providing a platform for networking, capacity building, policy advocacy, and personal as well as professional development.
                 </p>
                 <p className="text-gray-700">
-                  We champion the belief that professionals, as vital contributors to society, should be at the forefront of national development and eventually control a significant portion of the country's wealth—envisioning a future where empowered individuals shape Zimbabwe's economic and social agenda.
+                  We champion the belief that professionals, as vital contributors to society, should be at the forefront of national development and eventually control a significant portion of the country&apos;s wealth—envisioning a future where empowered individuals shape Zimbabwe&apos;s economic and social agenda.
                 </p>
               </motion.div>
               
@@ -144,7 +144,7 @@ export default function AboutPage() {
               >
                 <h2 className="text-3xl font-bold text-red-800 mb-6 border-b-2 border-red-200 pb-2 inline-block">Our Vision</h2>
                 <p className="text-gray-700 mb-6">
-                  We envision a Zimbabwe where professionals are economically empowered, actively participating in wealth creation and contributing significantly to the nation's development.
+                  We envision a Zimbabwe where professionals are economically empowered, actively participating in wealth creation and contributing significantly to the nation&apos;s development.
                 </p>
                 <p className="text-gray-700">
                   PROWEB aims to be the leading platform that enables professionals to network effectively, develop their skills, and advocate for policies that create an enabling environment for professional growth and economic participation.

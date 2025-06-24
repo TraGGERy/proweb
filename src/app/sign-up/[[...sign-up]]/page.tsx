@@ -1,4 +1,5 @@
 import { SignUp } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function SignUpPage() {
   return (
@@ -8,9 +9,9 @@ export default function SignUpPage() {
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Create your PROWEB account</h2>
           <p className="mt-2 text-sm text-gray-600">
             Or{' '}
-            <a href="/sign-in" className="font-medium text-red-800 hover:text-red-700">
+            <Link href="/sign-in" className="font-medium text-red-800 hover:text-red-700">
               sign in to your existing account
-            </a>
+            </Link>
           </p>
         </div>
         <div className="mt-8">

@@ -181,7 +181,7 @@ export default function GalleryPage() {
             >
               <h1 className="text-4xl font-bold text-red-800 mb-4">Gallery</h1>
               <p className="text-xl text-gray-600">
-                Visual highlights from PROWEB Zimbabwe's events, programs, and activities
+                Visual highlights from PROWEB Zimbabwe&apos;s events, programs, and activities
               </p>
             </motion.div>
           </div>

@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Footer from "@/components/Footer";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Sample news data - in a real application, this would come from an API or CMS
 const newsArticles = [
@@ -112,7 +111,7 @@ export default function NewsPage() {
             >
               <h1 className="text-4xl font-bold text-red-800 mb-4">News & Updates</h1>
               <p className="text-xl text-gray-600">
-                Stay informed about PROWEB Zimbabwe's latest activities, events, and initiatives
+                Stay informed about PROWEB Zimbabwe&apos;s latest activities, events, and initiatives
               </p>
             </motion.div>
           </div>

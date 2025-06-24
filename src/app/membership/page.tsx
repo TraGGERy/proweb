@@ -429,7 +429,7 @@ export default function MembershipPage() {
                 </div>
                 
                 <div className="mt-10 text-center">
-                  <p className="text-gray-600 mb-4">Still have questions? We're here to help!</p>
+                  <p className="text-gray-600 mb-4">Still have questions? We&apos;re here to help!</p>
                   <Link 
                     href="#footer" 
                     className="inline-block text-red-800 font-medium hover:text-red-700"
@@ -506,7 +506,7 @@ export default function MembershipPage() {
                       <p className="text-gray-600">{testimonial.title}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 italic">&quot;{testimonial.quote}&quot;</p>
                 </motion.div>
               ))}
             </div>

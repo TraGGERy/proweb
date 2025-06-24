@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/OptimizedHeader";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
@@ -9,7 +7,6 @@ import AchievementsSection from "@/components/AchievementsSection";
 import CallToAction from "@/components/CallToAction";
 import ContactInfoBar from "@/components/ContactInfoBar";
 import Footer from "@/components/Footer";
-import { auth } from "@clerk/nextjs/server";
 
 export default function Home() {
   

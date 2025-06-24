@@ -59,7 +59,7 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     
     // Build update query dynamically based on provided fields
     const updateFields: string[] = [];
-    const queryParams: any[] = [];
+    const queryParams: (string | number | boolean)[] = [];
     let paramCounter = 1;
     
     // Fields that can be updated

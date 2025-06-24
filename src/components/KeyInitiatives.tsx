@@ -4,7 +4,7 @@ export default function KeyInitiatives() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-red-800 mb-2 text-center">Key Initiatives</h2>
         <p className="text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-          Our programs are designed to empower women across all sectors of Zimbabwe's economy
+          Our programs are designed to empower women across all sectors of Zimbabwe&apos;s economy
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">

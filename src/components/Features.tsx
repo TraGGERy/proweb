@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Features() {
   const features = [
@@ -75,7 +74,7 @@ export default function Features() {
             Key Programs
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Our programs are designed to empower professionals across all sectors of Zimbabwe's economy
+            Our programs are designed to empower professionals across all sectors of Zimbabwe&apos;s economy
           </p>
         </motion.div>
         

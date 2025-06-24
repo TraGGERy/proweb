@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 border-b border-red-700 pb-2">PROWEB Zimbabwe</h3>
             <p className="text-red-200 mb-4">
-              Professional Women, Women Executives and Business Women's Forum
+              Professional Women, Women Executives and Business Women&apos;s Forum
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-yellow-300 transition-colors duration-300">

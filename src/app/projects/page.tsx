@@ -422,7 +422,7 @@ export default function ProjectsPage() {
             >
               <h2 className="text-3xl font-bold mb-6">Have a Project Idea?</h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
-                We're always looking for impactful initiatives that align with our mission of professional empowerment and economic development.
+                We&apos;re always looking for impactful initiatives that align with our mission of professional empowerment and economic development.
               </p>
               <Link 
                 href="#footer" 

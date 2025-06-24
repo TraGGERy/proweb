@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { query } from '@/lib/db';
+// Import schema types as needed
 import { NewsArticle } from '@/lib/models/schema';
 
 // GET handler to fetch all news articles
@@ -13,7 +14,7 @@ export async function GET(request: Request) {
     
     // Build the SQL query based on filters
     let sqlQuery = 'SELECT * FROM news_articles';
-    const queryParams: any[] = [];
+    const queryParams: (string | number | boolean)[] = [];
     const conditions: string[] = [];
     
     if (category && category !== 'All') {

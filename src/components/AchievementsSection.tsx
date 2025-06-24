@@ -47,7 +47,7 @@ export default function AchievementsSection() {
           <div className="md:w-1/2 bg-red-50 p-8 rounded-lg">
             <h3 className="text-xl font-bold text-red-800 mb-4">Community Impact Projects</h3>
             <p className="text-gray-700 mb-4">
-              From free health services to grassroots capacity building, our community initiatives extend the benefits of women's empowerment to broader society.
+              From free health services to grassroots capacity building, our community initiatives extend the benefits of women&apos;s empowerment to broader society.
             </p>
             <Link href="/impact" className="text-red-800 font-medium hover:text-red-600 flex items-center">
               Explore Our Impact
