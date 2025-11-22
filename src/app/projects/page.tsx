@@ -122,7 +122,7 @@ const projectsData = [
     status: "Active",
     startDate: "July 2023",
     endDate: "June 2024",
-    image: "/IMG_7463.jpg",
+    image: "/IMG_7546.jpg",
     featured: false
   }
 ];

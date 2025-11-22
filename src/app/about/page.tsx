@@ -126,7 +126,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <Image 
-                  src="/mission-image.jpg" 
+                  src="/IMG_7546.jpg" 
                   alt="PROWEB mission in action" 
                   fill 
                   style={{objectFit: "cover"}}
@@ -143,7 +143,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8 }}
               >
                 <Image 
-                  src="/vision-image.jpg" 
+                  src="/IMG_7546.jpg" 
                   alt="PROWEB vision" 
                   fill 
                   style={{objectFit: "cover"}}
