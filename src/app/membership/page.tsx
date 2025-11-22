@@ -61,7 +61,7 @@ export default function MembershipPage() {
               </p>
               <div className="mt-6 relative h-64 w-full max-w-2xl mx-auto rounded-lg overflow-hidden shadow-lg">
                 <Image 
-                  src="/IMG_7463.jpg" 
+                  src="/IMG_7543.jpg" 
                   alt="PROWEB Zimbabwe Membership" 
                   fill 
                   style={{objectFit: "cover"}}
