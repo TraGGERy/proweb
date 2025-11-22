@@ -72,16 +72,7 @@ export default function Header() {
             >
               About
             </Link>
-            <Link
-              href="/services"
-              className={`text-gray-800 transition-colors px-3 py-1 rounded-md ${
-                isActive('/services') 
-                  ? 'border-2 border-red-800 text-red-800 font-medium' 
-                  : 'hover:text-red-800 hover:bg-red-50'
-              }`}
-            >
-              Services
-            </Link>
+           
             <Link
               href="/membership"
               className={`text-gray-800 transition-colors px-3 py-1 rounded-md ${
@@ -122,16 +113,7 @@ export default function Header() {
             >
               Gallery
             </Link>
-            <Link
-              href="/contact"
-              className={`text-gray-800 transition-colors px-3 py-1 rounded-md ${
-                isActive('/contact') 
-                  ? 'border-2 border-red-800 text-red-800 font-medium' 
-                  : 'hover:text-red-800 hover:bg-red-50'
-              }`}
-            >
-              Contact
-            </Link>
+           
             
             {isSignedIn ? (
               <div className="flex items-center space-x-4">
